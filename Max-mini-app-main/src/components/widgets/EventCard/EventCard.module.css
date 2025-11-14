@@ -1,0 +1,74 @@
+/* Внешний блок карточки */
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  /* Обёртка для изображения с оверлеем */
+  .imageWrap {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Картинка на фоне */
+  .image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Нижний стек для текста и даты */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+  
+    /* мягкий нижний градиент для читабельности */
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.35) 75%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+  
+  /* Заголовок */
+  .title {
+    color: var(--color-text-primary);
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 17.5px */
+    margin: 0;
+  }
+  
+  /* Бейдж с датой/временем */
+  .badge {
+    display: inline-flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.20);
+  
+    color: var(--color-white);
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }

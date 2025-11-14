@@ -1,0 +1,140 @@
+/* Карточка */
+.root {
+    display: flex;
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  
+    background: var(--bg-second);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+  }
+  
+  /* Заголовок */
+  .title {
+    color: var(--color-white);
+    font-family: Arial, system-ui, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+  }
+  
+  /* Год */
+  .year {
+    color: #b0b0b0;
+    font-family: Arial, system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  
+  /* Период */
+  .period {
+    color: #b0b0b0;
+    font-family: Arial, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  
+  /* Нижняя часть */
+  .footer {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Обёртка для бейджа и прогресс-бара */
+  .statusWrapper {
+    display: flex;
+    flex-direction: row; /* ✅ теперь в ряд */
+    align-items: center;
+    gap: 12px; /* расстояние между бейджем и линией */
+    width: 100%;
+  }
+  
+  /* === Кастомная кнопка === */
+  .customButton {
+    display: flex;
+    padding: 6px 8px;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 10px;
+    background: var(--accent-blue, #007aff);
+    color: var(--color-white);
+    font-family: Arial, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .customButton:hover {
+    background: #3395ff;
+  }
+  
+  .customButton:active {
+    transform: scale(0.97);
+  }
+  
+  .customButton:disabled,
+  .customButtonDisabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  .customButtonDisabled:hover {
+    background: var(--accent-blue, #007aff);
+  }
+  
+  .customButtonDisabled:active {
+    transform: none;
+  }
+  
+  /* === Метки доступен / завершен === */
+  .badge {
+    display: inline-flex;
+    padding: 6px 8px;
+    border-radius: 10px;
+    font-family: Arial, system-ui, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .badgeAvailable {
+    background: var(--badge-available);
+    color: var(--color-white);
+    font-weight: 700;
+  }
+  
+  .badgeFinished {
+    background: var(--badge-finished);
+    color: var(--color-white);
+    font-weight: 700;
+    opacity: 0.85;
+  }
+  
+  /* === Линия прогресса === */
+  .progressBar {
+    flex: 1; /* ✅ занимает всё доступное пространство справа */
+    height: 4px;
+    border-radius: 4px;
+    background: #48484a;
+    overflow: hidden;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: var(--badge-available);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }

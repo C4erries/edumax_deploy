@@ -1,0 +1,245 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  align-items: center;
+  padding: var(--space-xl);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  left: var(--space-xl);
+  top: 31px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+}
+
+.backIcon {
+  width: 8px;
+  height: 14px;
+  transform: rotate(180deg);
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+
+  border-radius:var(--space-xl);
+  border: 1px solid var(--border-border_card, #48484D);
+  background: var(--bg-second, #2C2C2E);
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  width: 100%;
+  max-width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 100%;
+
+}
+
+.requestNumberBadge {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-blue, #007aff);
+  color: var(--color-text-primary);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.304px;
+}
+
+.statusContainer {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+  height: 32px;
+}
+
+.statusBadge {
+  display: flex;
+  padding: var(--space-xs);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  height: fit-content;
+  width: fit-content;
+}
+
+.statusPending {
+  background: var(--status-pending-bg);
+}
+
+.statusApproved {
+  background: var(--status-approved-bg);
+}
+
+.statusRejected {
+  background: var(--status-rejected-bg);
+}
+
+.clockWrapper {
+  border-radius: var(--radius-lg);
+  padding: var(--space-xs);
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.clockWrapperPending {
+  background: var(--clock-wrapper-pending-bg);
+}
+
+.clockWrapperApproved {
+  background: var(--clock-wrapper-approved-bg);
+}
+
+.clockWrapperRejected {
+  background: var(--clock-wrapper-rejected-bg);
+}
+
+.statusIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.statusIconRejected {
+  width: 14px;
+  height: 14px;
+}
+
+.fieldsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.documentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.documentsHeader {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.documentsTitle {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.documentsIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.documentsList {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.documentPreview {
+  width: 71px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--color-bg-second);
+  border: 1px solid var(--color-border-card);
+}
+
+.actionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.actionButton {
+  width: 100%;
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  min-height: 200px;
+}
+
+.valueNormal {
+  font-weight: 400;
+}
+
+.valueSemibold {
+  font-weight: 600;
+}
+
+.valueArial {
+  font-family: Arial, system-ui, sans-serif;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
